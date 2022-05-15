@@ -20,10 +20,10 @@ header {
     background-color: tan;
 }
 .msg {
-    background-color: darkgrey; 
+    background-color: rgb(136, 135, 135); 
 }
 footer {
-    background-color: darkgrey;
+    background-color: rgb(136, 135, 135);
 }
 header {
     background-color:rgba(20,30,13, .7);
