@@ -1,9 +1,29 @@
 #background {
     height: 725px;
 }
-
+.center {
+    text-align: center;
+}
 body {
-    background-color: #B3FFFC; 
+    background-color: white;
+}
+header {
+    background-color: white;
+}
+ .bbok, .join {
+    background-color: white;
+}
+ .book:hover, .join:hover {
+    background-color: lightgrey;
+}
+#background {
+    background-color: tan;
+}
+.msg {
+    background-color: darkgrey; 
+}
+footer {
+    background-color: darkgrey;
 }
 header {
     background-color:rgba(20,30,13, .7);
@@ -13,13 +33,37 @@ nav a:hover {
 }
 nav a:hover {
     background-color: #254441;
-    color: #EDF2EF;
+    color: black;
 } 
 .icon {
     width: 80px;
 }
 nav a {
     text-align: center;
-    color: #FFFFFF;
+    color: white;
     text-decoration: none;
+}
+.book, .join {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+footer a {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+footer h3 a:hover {
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+}
+section {
+    text-align: center;
+}
+.logo {
+    width: 80px;
+}
+#hero-img {
+    width: 100%;
 }
