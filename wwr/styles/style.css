@@ -1,0 +1,25 @@
+#background {
+    height: 725px;
+}
+
+body {
+    background-color: #B3FFFC; 
+}
+header {
+    background-color:rgba(20,30,13, .7);
+}
+nav a:hover {
+    background-color: #254441;
+}
+nav a:hover {
+    background-color: #254441;
+    color: #EDF2EF;
+} 
+.icon {
+    width: 80px;
+}
+nav a {
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+}
