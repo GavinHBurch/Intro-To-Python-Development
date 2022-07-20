@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/contactuscarlie.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,42 +19,52 @@
         </nav>
     </header>
     <main class="home-grid">
-        <div style= "display:inline-block;vertical-align:top;">
-        <section class="math-card">
-        <img class="card-img"><img src="images/pexels-jeshootscom-714698.jpg" height="300px" width="300px" alt="math">
-        </div>
-        <div style="display:inline-block;">
+        <section class="email-card">
+        <img class="card-img" src="images/pexels-miguel-á-padriñán-1591062.jpg" height="600px" width="600px" alt="email">
             <p>
-                In Mrs Carlies Class we go over the basic math with our pre-school students.
-                We teach them simple addition and subtraction. We do our best to get them ready
-                for kindergarden and have them to start preparing for kindergarden. 
+            <h2>Here is our email XXXXXXXXX@gmail.com, if you have any questions about what we are teaching or what your
+            kids will be doing in our class please send us a email, call, or use our feedback feture in our app.
+            </h2>
+            </p>  
+        </section>
+        <section class="phone-card">
+        <img class="card-img" src="images/pexels-pixabay-163007.jpg" height="600px" width="600px" alt="phone">
+            <p>
+            <h2>We love hearing from parents about any concerns with your kids, please do not be afraid to give us a call. 
+            Our number is 801-XXX-XXXX our use our feedback app and we will reach out to you by phone or email.
+            </h2>
+            </p> 
+        <div id="feedback"></div>
+        <section class="form-card">
+            <h2>
+            <p>
+            <form action="/my-handling-form-page" method="post">
+    
+            <ul>
+            <li>
+                <label for="name">Student Name:</label>
+                <input type="text" id="name" name="user_name">
+            </li>
+            <li>
+                <label for="parent-name">Parent Name:</label>
+                <input type="text" id="name" name="user_name">
+            </li>
+            <li>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="user_email">
+            </li>
+                <li>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </li>
+            <li class="button">
+                <button type="submit">Send your message</button>
+            </li>
+            </ul>
+            </h2>
             </p>
-        </div>
+            </form>
         </section>
-
-        <div>
-        <section class="teach-card">
-        <img class="card-img" src="images/pexels-pixabay-301926.jpg" height="300px" width="300px" alt="teach">
-        </div>
-            We are here to teach your kids the basics of school. We are here to 
-            teach them math, reading, numbers, and science. We teach them the basics
-            to help them move unto the next grade and help them to learn these four things.  
-        </div>
-        </div>
-        </section>
-        </div>
-        <div>
-        <section class="kids-card">
-        <img class="card-img" src="images/pexels-yan-krukov-8613305.jpg" height="300px" width="300px" alt="kids">
-        </div>
-            We love teaching kids and our ready to be the best teacher to your kids. We focus 
-            on helping children learn and to become the best in these studies. We really like
-            to focus on reading the most but will help your child to become the best student they can. 
-        </div>
-        </div>
-        </section>
-        </div>
-        <div>
     </main>
     <footer>
         <h3>Mrs Carlies Class &copy; 2022</h3>
@@ -72,5 +82,22 @@
             </a>
         </div>
     </footer>
-    </body>
-    </html>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+            // stop the form from doing the default action.
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+</body>
+</html>
